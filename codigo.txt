@@ -1,0 +1,27 @@
+internal class Program
+{
+
+    private static void Main(string[] args)
+    {
+        int id = 3;
+        string nombre = " ";
+        double SC = 0;
+        Console.WriteLine("--- Gestión de Créditos: Modo Estructurado ---");
+        nombre = "Cliente Temporal";
+        SumarCredito(ref SC, 100);
+        MostrarInfo(nombre, SC);
+        nombre = "Cliente Registrado";
+        SumarCredito(ref SC, 500);
+        MostrarInfo(nombre, SC);
+        Console.ReadLine();
+    }
+    private static void SumarCredito(ref double SC, double MS)
+    {
+        SC += MS;
+    }
+    private static void MostrarInfo(string nombre, double SC)
+    {
+        Console.WriteLine(nombre);
+        Console.WriteLine(SC);
+    }
+}
